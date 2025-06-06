@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <title data-th-text="${loggedInUser.name}+' | Dashboard'">Profile Page</title>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+        <div class="sm:pl-64 pt-20" style="height: 1000px;">
+            <div class="flex justify-center flex-col items-center">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    console.log("profile page using script");
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <title data-th-text="${loggedInUser.name}+' | SCM'">Profile Page</title>
+</head>
+
+<body>
+
+    <div id="content">
+
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar::sidebar}"></div>
+        </div>
+        <div class="sm:pl-64 pt-20">
+            <div class="flex items-center justify-center flex-col ">
+                <div class="max-w-lg w-full bg-white dark:bg-gray-800 p-6 shadow-lg rounded-lg overflow-hidden">
+                    <div class="flex flex-col items-center">
+                        <!-- Profile Picture -->
+                        <img 
+                            onerror="this.onerror=null; this.src='https:/'+'/upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png'";
+                            th:src="@{${loggedInUser.profilePic}}" alt="Profile Picture"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"/>
+                    </div>
+                    <div class="text-center p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white" th:text="${loggedInUser.name}">User Name</h2>
+                        
+                        <p class="text-gray-600 dark:text-white mt-2">Email: <span th:text="${loggedInUser.email}">user@example.com</span></p>
+                        
+                        <p class="text-gray-600 dark:text-white mt-2">Phone: <span th:text="${loggedInUser.phoneNumber}">+91 1234567890</span></p>
+                        
+                        <p class="mt-4 text-sm text-gray-500 dark:text-white"  th:text="${loggedInUser.about}">
+                            This is a short description about the user. You can add more details here about the user's profile.
+                        </p>
+                    </div>
+            
+                    <div class="flex justify-around p-4 bg-gray-50 dark:bg-gray-800">
+                        <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-200">
+                            Edit Profile
+                        </a>
+                        <a href="#" class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition duration-200">
+                            Delete Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+    </div>
+</body>
+<script>
+    console.log("profile page using script");
+</script>
+
+</html>

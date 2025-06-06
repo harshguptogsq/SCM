@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+    <title>About Page</title>    
+</head>
+<body>
+    <div id="content">
+        <!-- <section class="py-20 bg-white dark:bg-gray-900"> -->
+            <div class="container mx-auto text-center bg-white dark:bg-gray-900 mt-8">
+                <h2 class="text-3xl font-bold p-8 mb-4 animate__animated animate__fadeInUp">What Our Users Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+                        <p class="text-gray-600 italic">"Contact Manager has changed the way I organize my contacts.
+                            It's
+                            fast, secure, and incredibly easy to use!"</p>
+                        <h4 class="text-lg font-semibold mt-4 dark:text-black">- John Doe</h4>
+                    </div>
+                    <div
+                        class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+                        <p class="text-gray-600 italic">"A fantastic app with great features! I love the 24/7 access and
+                            secure storage options."</p>
+                        <h4 class="text-lg font-semibold mt-4 dark:text-black">- Jane Smith</h4>
+                    </div>
+                </div>
+            </div>
+        <!-- </section> -->
+    </div>
+</body>
+<script>
+    console.log("about tag using script");
+</script>
+</html>

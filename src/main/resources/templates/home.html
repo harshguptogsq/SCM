@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <title>Home page</title>
+</head>
+
+<body>
+    <div id="content" class="border dark:border-gray-900">
+        <!-- Banner Section -->
+        <section class="bg-blue-600 dark:bg-gray-600 text-white py-20 animate__animated animate__fadeInDown">
+            <div 
+                 
+                class="container mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4">Welcome to Contact Manager</h2>
+                <p class="text-lg mb-8">Manage all your contacts effortlessly and securely in one place.</p>
+                <a data-th-href="@{'/user/dashboard'}"  
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get
+                    Started</a>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white dark:bg-gray-900">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp dark:text-white">Features</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-address-book text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-black">Easy Contact Management</h3>
+                        <p class="text-gray-600">Add, edit, and organize your contacts in a user-friendly interface.</p>
+                    </div>
+                    <div
+                        class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-lock text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-black">Secure Storage</h3>
+                        <p class="text-gray-600">Your data is protected with top-level encryption and security measures.
+                        </p>
+                    </div>
+                    <div
+                        class="p-6 bg-gray-100 rounded shadow hover:shadow-lg transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-globe text-blue-600 text-4xl mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 dark:text-black">24/7 Access</h3>
+                        <p class="text-gray-600">Access your contacts anytime, anywhere from any device.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-blue-600 dark:bg-gray-600 text-white py-20 animate__animated animate__fadeInUp">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Ready to Manage Your Contacts?</h2>
+                <p class="text-lg mb-8">Sign up today and experience the easiest way to manage your contacts.</p>
+                <a data-th-href="@{'/register'}"
+                    class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Create
+                    an Account</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        
+
+    </div>
+    <script>
+        console.log("Home page");
+    </script>
+</body>
+
+</html>
